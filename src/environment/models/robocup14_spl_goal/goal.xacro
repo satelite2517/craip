@@ -1,0 +1,368 @@
+<?xml version="1.0" ?>
+<sdf version="1.5" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="scale" value="0.7"/>
+
+  <model name="RoboCup 2014 SPL Goal">
+    <static>true</static>
+
+    <!-- Left post -->
+    <link name="left_post">
+      <pose>${0 * scale} ${0.8 * scale} ${0.45 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>${0.05 * scale}</radius>
+            <length>${0.9 * scale}</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>${0.05 * scale}</radius>
+            <length>${0.9 * scale}</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/ZincYellow</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Left support horizontal lower -->
+    <link name="left_support_horiz_lower">
+      <pose>${0.24 * scale} ${0.8 * scale} ${0.01 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Left support horizontal upper -->
+    <link name="left_support_horiz_upper">
+      <pose>${0.24 * scale} ${0.8 * scale} ${0.79 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Left support vertical -->
+    <link name="left_support_vertical">
+      <pose>${0.44 * scale} ${0.8 * scale} ${0.4 * scale} 0 1.5708 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.80 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.80 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Right support horizontal lower -->
+    <link name="right_support_horiz_lower">
+      <pose>${0.24 * scale} ${-0.8 * scale} ${0.01 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Right support horizontal upper -->
+    <link name="right_support_horiz_upper">
+      <pose>${0.24 * scale} ${-0.8 * scale} ${0.79 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Right support vertical -->
+    <link name="right_support_vertical">
+      <pose>${0.44 * scale} ${-0.8 * scale} ${0.4 * scale} 0 1.5708 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.80 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.80 * scale} ${0.02 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Center support horizontal lower -->
+    <link name="center_support_horiz_lower">
+      <pose>${0.44 * scale} ${0 * scale} ${0.01 * scale} 0 1.5708 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.02 * scale} ${1.58 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.02 * scale} ${1.58 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Center support horizontal upper -->
+    <link name="center_support_horiz_upper">
+      <pose>${0.44 * scale} ${0 * scale} ${0.79 * scale} 0 1.5708 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.02 * scale} ${1.58 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.02 * scale} ${1.58 * scale} ${0.02 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Right post -->
+    <link name="right_post">
+      <pose>${0 * scale} ${-0.8 * scale} ${0.45 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>${0.05 * scale}</radius>
+            <length>${0.9 * scale}</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>${0.05 * scale}</radius>
+            <length>${0.9 * scale}</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/ZincYellow</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Crossbar -->
+    <link name="crossbar">
+      <pose>${0 * scale} ${0 * scale} ${0.85 * scale} 1.57 1.57 0</pose>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>${0.05 * scale}</radius>
+            <length>${1.5 * scale}</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>${0.05 * scale}</radius>
+            <length>${1.5 * scale}</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/ZincYellow</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Center net -->
+    <link name="center_net">
+      <pose>${0.44 * scale} ${0 * scale} ${0.40 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.01 * scale} ${1.6 * scale} ${0.80 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.01 * scale} ${1.6 * scale} ${0.80 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Left net -->
+    <link name="left_net">
+      <pose>${0.24 * scale} ${0.8 * scale} ${0.40 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.01 * scale} ${0.76 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.01 * scale} ${0.76 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Right net -->
+    <link name="right_net">
+      <pose>${0.24 * scale} ${-0.8 * scale} ${0.40 * scale} 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.01 * scale} ${0.76 * scale}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>${0.38 * scale} ${0.01 * scale} ${0.76 * scale}</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+  </model>
+</sdf>

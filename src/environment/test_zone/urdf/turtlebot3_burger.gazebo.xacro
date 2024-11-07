@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<robot name="autorace_sim" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:arg name="laser_visual" default="false"/>
+  <xacro:arg name="camera_visual" default="false"/>
+  <xacro:arg name="imu_visual" default="false"/>
+  <xacro:arg name="gaussian_noise" default="0.01"/>
+  <xacro:arg name="rate_mean" default="0.0"/>
+  <xacro:arg name="rate_stddev" default="0.01"/>
+  <xacro:arg name="rate_bias_mean" default="0.0"/>
+  <xacro:arg name="rate_bias_stddev" default="0.001"/>
+  <xacro:arg name="accel_mean" default="0.0"/>
+  <xacro:arg name="accel_stddev" default="0.01"/>
+  <xacro:arg name="accel_bias_mean" default="0.0"/>
+  <xacro:arg name="accel_bias_stddev" default="0.001"/>
+
+  <xacro:macro name="configure_imu" params="gaussian_noise rate_mean rate_stddev rate_bias_mean rate_bias_stddev accel_mean accel_stddev accel_bias_mean accel_bias_stddev">
+    <gazebo reference="imu_link">
+      <gravity>true</gravity>
+      <sensor name="imu_sensor" type="imu">
+          <always_on>true</always_on>
+          <update_rate>1000</update_rate>
+          <visualize>true</visualize>
+          <topic>__default_topic__</topic>
+          <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+              <topicName>imu</topicName>
+              <bodyName>imu_link</bodyName>
+              <updateRateHZ>0</updateRateHZ>
+              <gaussianNoise>${gaussian_noise}</gaussianNoise>
+              <xyzOffset>0 0 0</xyzOffset>
+              <rpyOffset>0 0 0</rpyOffset>
+              <frameName>imu_link</frameName>
+              <initialOrientationAsReference>false</initialOrientationAsReference>
+          </plugin>
+          <pose>0 0 0 0 0 0</pose>
+          <noise>
+              <type>gaussian</type>
+                <angular_velocity>
+                  <mean>${rate_mean}</mean>
+                  <stddev>${rate_stddev}</stddev>
+                  <bias_mean>${rate_bias_mean}</bias_mean>
+                  <bias_stddev>${rate_bias_stddev}</bias_stddev>
+                </angular_velocity>
+                <linear_acceleration>
+                  <mean>${accel_mean}</mean>
+                  <stddev>${accel_stddev}</stddev>
+                  <bias_mean>${accel_bias_mean}</bias_mean>
+                  <bias_stddev>${accel_bias_stddev}</bias_stddev>
+                </linear_acceleration>
+          </noise>
+        </sensor>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- Use the defined macro -->
+  <xacro:configure_imu
+    gaussian_noise="${gaussian_noise}" 
+    rate_mean="${rate_mean}" 
+    rate_stddev="${rate_stddev}" 
+    rate_bias_mean="${rate_bias_mean}" 
+    rate_bias_stddev="${rate_bias_stddev}" 
+    accel_mean="${accel_mean}" 
+    accel_stddev="${accel_stddev}" 
+    accel_bias_mean="${accel_bias_mean}" 
+    accel_bias_stddev="${accel_bias_stddev}" />
+
+  <gazebo reference="wheel_left_link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="wheel_right_link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="caster_back_link">
+    <mu1>0.1</mu1>
+    <mu2>0.1</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="turtlebot3_burger_controller" filename="libgazebo_ros_diff_drive.so">
+      <alwaysOn>true</alwaysOn>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometrySource>world</odometrySource>
+      <publishOdomTF>false</publishOdomTF>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+      <publishWheelTF>false</publishWheelTF>
+      <publishTf>true</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <legacyMode>false</legacyMode>
+      <updateRate>30</updateRate>
+      <leftJoint>wheel_left_joint</leftJoint>
+      <rightJoint>wheel_right_joint</rightJoint>
+      <wheelSeparation>0.160</wheelSeparation>
+      <wheelDiameter>0.066</wheelDiameter>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>10</wheelTorque>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="base_scan">
+    <material>Gazebo/FlatBlack</material>
+    <sensor type="ray" name="lds_lfcd_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>$(arg laser_visual)</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>0.0</min_angle>
+            <max_angle>6.28319</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.120</min>
+          <max>3.5</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+        <topicName>scan</topicName>
+        <frameName>base_scan</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>  
+</robot>

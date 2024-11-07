@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="burger"/>
+  <param name="model" value="$(arg model)"/>
+
+  <!-- turtlebot3_teleop_key already has its own built in velocity smoother -->
+  <node pkg="test_zone" type="turtlebot3_teleop_key" name="turtlebot3_teleop_keyboard"  output="screen">
+  </node>
+</launch>
