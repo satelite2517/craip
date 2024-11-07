@@ -70,8 +70,23 @@ conda activate limbo
    # ex) export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/aril/craip/src/environment/models
    ```
 
-#### 5. Build
-ddd
+#### 5. Build the Project
+   Once all the files are downloaded and dependencies are installed, you need to build the project using catkin_make. This command will compile the code and set up the environment for further execution.
+
+   Navigate to the root of your catkin workspace and run:
+
+   ```bash
+   cd <path to repository>  
+   catkin_make
+   ```
+
+#### 6. Source the Workspace
+After the build completes successfully, source the workspace to update your environment with the new packages:
+
+```bash
+source devel/setup.bash
+```
+By sourcing this file, you'll ensure that ROS can locate and use the new packages and models in your setup.
 
 ## Mission
 ![image](./images/209_gazebo_BEV.png)
