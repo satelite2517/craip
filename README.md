@@ -307,4 +307,3 @@ streamlit run goal_selector_web.py -- --llm gpt --gpt gpt-4o --prompt landmark
 streamlit run goal_selector_web.py -- --llm ollama --ollama llama3.1:8b --prompt landmark
 ```
 Once all the steps are completed, the goal selector should run properly.
-# craip
