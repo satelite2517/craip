@@ -101,7 +101,8 @@ By sourcing this file, you'll ensure that ROS can locate and use the new package
    - If you need assistance with any part of the mission implementation, the teaching assistants will be available to help. 
    - If a mission is deemed unfeasible, it may be declined.
 
-  _Detailed evaluation criteria will be announced later._ 
+  _You may use any type of robot and any method to complete the mission. 
+  Detailed evaluation criteria will be announced later._ 
 
 ## Running Gazebo World
 ### Spawn Go1 and All Objects at Once
