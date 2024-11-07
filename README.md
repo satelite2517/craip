@@ -70,6 +70,9 @@ conda activate limbo
    # ex) export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/aril/craip/src/environment/models
    ```
 
+#### 5. Build
+ddd
+
 ## Mission
 ![image](./images/209_gazebo_BEV.png)
 
@@ -161,9 +164,6 @@ python filter_subgoal_coord.py --init_coord <x_coordinate>, <y_coordinate> --lan
 ```
 2) To publish the subgoal coordinate via ROS,
 ```bash
-cd <path to repository>
-catkin_make
-
 roslaunch vlmaps publish_subgoal_coordinates.launch 
 ```
 This launch file emits the coordinate of the first landmark immediately. Publication of the following coordinates are driven by an arrival signal (`/subgoal_arrived_topic`) from path planner.
