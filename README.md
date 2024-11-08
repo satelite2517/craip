@@ -103,6 +103,20 @@ By sourcing this file, you'll ensure that ROS can locate and use the new package
 
   _Detailed evaluation criteria will be announced later._ 
 
+## Navigating with Custom User Instruction
+To execute the basic language navigation task, run the manual below.
+
+1. Gather necessary files for navigation via following [Setup
+](#setup).
+2. Open the Web page to pass a user instruction via following [Running LLM-based Goal Selector](#llm-based-goal-selector).
+3. Launch the language navigation system.
+   ```bash
+   roslaunch limbo limbo.launch
+   ```
+4. Enter the language instruction on the LLM web page and click the submit button.
+   ![image](./images/llm_web.png)
+
+# Descriptions of each module included in limbo.launch
 ## Running Gazebo World
 ### Spawn Go1 and All Objects at Once
 Run the launch file to open gazebo world.
@@ -144,22 +158,6 @@ To control Go1, run the following command in another terminal.
 ```bash
 roslaunch test_zone teleop_key.launch
 ```
-
-## Navigating with Custom User Instruction
-To execute the basic language navigation task, run the manual below.
-
-1. Gather necessary files for navigation via following [Setup
-](#setup).
-1. Run the Gazebo simulator and spawn a quadruped robot via following [Running Gazebo World](#running-gazebo-world).
-2. Open the Web page to pass a user instruction via following [Running LLM-based Goal Selector](#llm-based-goal-selector).
-3. Launch the language navigation system.
-   ```bash
-   roslaunch limbo limbo.launch
-   ```
-4. Enter the language instruction on the LLM web page and click the submit button.
-   ![image](./images/llm_web.png)
-
-# Descriptions of each module included in limbo.launch
 
 ## Publishing Map Node
  Publish obstacle map (`obstacles.npy`) and cost map (`costmap.npy`) with the following command.
