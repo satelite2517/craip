@@ -1,16 +1,16 @@
 # CRAIP: Creating Robot Artificial Ingelligence Project
 
 ## Overview
-CRAIP is the final project for the "Creating Robot Artificial Intelligence" course. CRAIP is based on the Language-Image-based Mobile Robot (LIMBO).
+CRAIP is the final project for the **"How to Make a Robot with Artificial Intelligence (M2177.002600), Fall 2024"** course.
 
-LIMBO means a robot system that performs navigation tasks following language instructions.
+CRAIP is developed using the Language-Image-based Mobile Robot (LIMBO) framework, designed to enable robots to perform navigation tasks based on language instructions.
 
-LIMBO has following components:
-- [Gazebo indoor simulation environment](#running-gazebo-world)
-- [LLM-based goal selector](#llm-based-goal-selector) to parse language instructions to landmarks to visit.
-- [Subgoal coordinate filter](#subgoal-coordinate-filter) to extract landmark poses in world coordinates.
-- [D-star path planner](#path-planner) for generating a path to the goal.
-- [MPPI controller](#controller-mppi) for low-level control of the robot.
+### LIMBO Components
+- **Gazebo Indoor Simulation Environment**: Provides a simulated indoor environment for robot operation. ([Running Gazebo World](#running-gazebo-world))
+- **LLM-Based Goal Selector**: Parses language instructions into landmarks for the robot to navigate to. ([LLM-based Goal Selector](#llm-based-goal-selector))
+- **Subgoal Coordinate Filter**: Extracts landmark poses in world coordinates for accurate navigation. ([Subgoal Coordinate Filter](#subgoal-coordinate-filter))
+- **D-star Path Planner**: Generates optimal paths to the designated goal. ([Path Planner](#path-planner-d-lite))
+- **MPPI Controller**: Handles low-level control to execute smooth navigation along the planned path. ([Controller MPPI](#controller-mppi))
 
 
 ## Requirements
