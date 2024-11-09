@@ -107,17 +107,25 @@ By sourcing this file, you'll ensure that ROS can locate and use the new package
 ## Navigating with Custom User Instruction
 To execute the basic language navigation task, run the manual below.
 
-1. Gather necessary files for navigation via following [Setup
-](#setup).
-2. Open the Web page to pass a user instruction via following [Running LLM-based Goal Selector](#llm-based-goal-selector).
-3. Launch the language navigation system.
+1. Gather necessary files for navigation via following [Setup](#setup).
+2. Run the Gazebo simulator. ([Running Gazebo World](#running-gazebo-world))
+   ```bash
+   export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<path to repository>/src/environment/models
+   roslaunch unitree_gazebo go1_209.launch
+   ```
+   In another terminal, run the following command to spawn Go1 and set objects in the simulator:
+   ```bash
+   roslaunch dynamic_objects mission_setting.launch
+   ```
+3. Open the Web page to pass a user instruction via following [Running LLM-based Goal Selector](#llm-based-goal-selector).
+4. Launch the language navigation system.
    ```bash
    roslaunch limbo limbo.launch
    ```
-4. Enter the language instruction on the LLM web page and click the submit button.
+5. Enter the language instruction on the LLM web page and click the submit button.
    ![image](./images/llm_web.png)
 
-# Descriptions of each module included in limbo.launch
+# Descriptions of each module
 ## Running Gazebo World
 ### Spawn Go1 and All Objects at Once
 Run the launch file to open gazebo world.
