@@ -6,7 +6,7 @@
     <include file="$(find path_planner)/launch/path_planner.launch"/>
     <include file="$(find path_tracker)/launch/path_tracker.launch"/>
     <!-- <include file="$(find perception)/launch/collision_detection.launch"/> -->
-    <!-- <include file="$(find dynamic_objects)/launch/mission_setting.launch"/> -->
+    <include file="$(find dynamic_objects)/launch/mission_setting.launch"/>
 
     <node pkg="rviz" type="rviz" name="limbo_rviz" args="-d $(find limbo)/rviz/limbo.rviz" />
 </launch>

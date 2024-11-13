@@ -113,9 +113,9 @@ To execute the basic language navigation task, run the manual below.
    export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<path to repository>/src/environment/models
    roslaunch unitree_gazebo go1_209.launch
    ```
-   In another terminal, run the following command to spawn Go1 and set objects in the simulator:
+   In another terminal, run the following command to spawn Go1 in the simulator:
    ```bash
-   roslaunch dynamic_objects mission_setting.launch
+   roslaunch unitree_guide go1_spawner.launch
    ```
 3. Open the Web page to pass a user instruction via following [Running LLM-based Goal Selector](#llm-based-goal-selector).
 4. Launch the language navigation system.
@@ -139,12 +139,6 @@ In another terminal, run the following commnad to spawn Go1 and set objects in t
 roslaunch dynamic_objects mission_setting.launch
 ```
 
-### Reset Environment to Initial Settings
-If you want to return to the initial settings, run the command below.
-```bash
-roslaunch dynamic_objects reset_environment.launch
-```
-
 ### Delete Go1 and Respawn Go1
 Sometimes, go1 may fall over. In such cases, delete go1 in Gazebo and respawn go1 only. 
 
@@ -161,6 +155,13 @@ roslaunch unitree_guide go1_spawner.launch
 If the Go1 is flipped after spawning, increase `/stand_wait_count` in the `go1_spawner.launch`.
 
 If the Go1 sinks after spawning, increase `/move_base_wait_count` in the `go1_spawner.launch`.
+
+### Reset Environment to Initial Settings
+If you want to return to the initial settings, run the command below. 
+```bash
+roslaunch dynamic_objects reset_environment.launch
+```
+If the reset completes successfully, terminate the launch file by pressing `Ctrl+c`.
 
 ### Manual Control of Go1 
 To control Go1, run the following command in another terminal.

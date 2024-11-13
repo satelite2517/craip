@@ -3,7 +3,7 @@
 
     <!-- Arg set -->
     <arg name="threshold_distance_human" default="3.0" />
-    <arg name="threshold_distance_door" default="1.45" />
+    <arg name="threshold_distance_door" default="2.0" />
 
     <arg name="actor_speed" default="0.5" />
     <arg name="follow_mode" default="path" doc="Mode for following. Options: 'velocity' for velocity-based control, 'path' for path-following." />
@@ -25,12 +25,12 @@
     <param name="spawn_door" command="$(find xacro)/xacro $(find dynamic_objects)/models/hinged_door.sdf" />
 
     <!-- Gazebo go1 spawn -->
-    <include file="$(find unitree_guide)/launch/go1_spawner.launch">
+    <!-- <include file="$(find unitree_guide)/launch/go1_spawner.launch">
       <arg name="x_loc" default="-2.358" />
       <arg name="y_loc" default="-1.608" />
       <arg name="z_loc" default="0.6" />
       <arg name="yaw" default="0" />
-    </include>
+    </include> -->
   
     <!-- Gazebo actor spawn -->
     <node name="spawn_actor" pkg="gazebo_ros" type="spawn_model" output="screen" args="
