@@ -37,7 +37,7 @@ conda activate limbo
 </p>
 
 #### 1. Download pre-built maps
-   Pre-built maps are used for planning and grounding landmarks. Download maps of our testbed from [this link](https://drive.google.com/file/d/1F-OBKUknezTBUBQsdPSWkMSvZhNj5-DL/view?usp=drive_link). Then follow the below commands:
+   Pre-built maps are used for planning and grounding landmarks. Download maps of our testbed from [this link](https://drive.google.com/file/d/1n_oBhH4A00rcvvd51Crx4umQvBPyYzn4/view?usp=sharing). Then follow the below commands:
    ```bash
    cd <path to repository>/src/vlmaps
    mkdir -p data/vlmaps
