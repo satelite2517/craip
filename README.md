@@ -42,9 +42,9 @@ conda activate limbo
    cd <path to repository>/src/vlmaps
    mkdir -p data/vlmaps
    ```
-   Unzip `room_209.zip` and put the maps under `<path to repository>/src/vlmaps/data/vlmaps`.
+   Unzip `vlmaps.zip` and put the maps under `<path to repository>/src/vlmaps/data/vlmaps`.
 
-   You can easily unzip via `unzip <path to home directory>/Downloads/room_209.zip -d <path to repository>/src/vlmaps/data/vlmaps`. 
+   You can easily unzip via `unzip <path to home directory>/Downloads/vlmaps.zip -d <path to repository>/src/vlmaps/data/vlmaps`. 
 
 #### 2. Download mesh
    - [Mesh](https://drive.google.com/file/d/1n2wlwDZQh2W59FWyweRA9UqvMwUoQcWK/view?usp=sharing)
