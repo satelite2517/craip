@@ -60,8 +60,7 @@ conda activate limbo
    To successfully interact with the quadruped robot, you should install additional Debian packages.
    ```bash
    sudo apt update
-   sudo apt install liblcm-dev
-   sudo apt install ros-noetic-controller-interface ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control ros-noetic-joint-state-controller ros-noetic-effort-controllers ros-noetic-joint-trajectory-controller
+   sudo apt install liblcm-dev ros-noetic-move-base ros-noetic-controller-interface ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control ros-noetic-joint-state-controller ros-noetic-effort-controllers ros-noetic-joint-trajectory-controller
    ```
    Then, export the environment variable to successfully load the downloaded model of our testbed to the Gazebo simulator.
    ```bash
