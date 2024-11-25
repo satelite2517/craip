@@ -1,0 +1,13 @@
+material triangle_sign
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture ../textures/triangle_sign_texture.jpg
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='diamond_sign'>
+    <static>true</static>
+    <link name="diamond_sign_link">
+        <visual name="diamond_sign_visual">
+            <geometry>
+            <mesh>
+                <scale>0.6 0.6 0.6</scale>
+                <uri>model://diamond_sign/meshes/model.dae</uri>
+            </mesh>
+            </geometry>
+            <material>
+            <script>
+                <uri>model://diamond_sign/materials/scripts</uri>
+                <uri>model://diamond_sign/materials/textures</uri>
+                <name>diamond_sign</name>
+            </script>
+            </material>
+        </visual>
+        <collision name="diamond_sign_collision">
+            <geometry>
+            <mesh>
+                <scale>0.6 0.6 0.6</scale>
+                <uri>model://diamond_sign/meshes/model.dae</uri>
+            </mesh>
+            </geometry>
+        </collision>
+    </link>
+  </model>
+</sdf>

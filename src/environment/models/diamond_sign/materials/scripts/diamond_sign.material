@@ -1,0 +1,13 @@
+material diamond_sign
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture ../textures/diamond_sign_texture.jpg
+      }
+    }
+  }
+}
