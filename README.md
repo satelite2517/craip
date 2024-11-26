@@ -47,7 +47,7 @@ conda activate limbo
    You can easily unzip via `unzip <path to home directory>/Downloads/vlmaps.zip -d <path to repository>/src/vlmaps/data/vlmaps`. 
 
 #### 2. Download mesh
-   - [Mesh](https://drive.google.com/file/d/1n2wlwDZQh2W59FWyweRA9UqvMwUoQcWK/view?usp=sharing)
+   - [Mesh](https://drive.google.com/file/d/1uX5bhO-e-B14faxfYmla2LYUmAoUkDK_/view?usp=sharing)
 
    Locate `209.dae` under `<path to repository>/src/environment/models/209/meshes/`
 
