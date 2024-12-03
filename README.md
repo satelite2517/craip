@@ -37,7 +37,7 @@ conda activate limbo
 </p>
 
 #### 1. Download pre-built maps
-   Pre-built maps are used for planning and grounding landmarks. Download maps of our testbed from [this link](https://drive.google.com/file/d/1n_oBhH4A00rcvvd51Crx4umQvBPyYzn4/view?usp=sharing). Then follow the below commands:
+   Pre-built maps are used for planning and grounding landmarks. Download maps of our testbed from [this link](https://drive.google.com/file/d/1xkIp8XQRsPKTbIlrBQj1t0VS0C8tq9kO/view?usp=sharing). Then follow the below commands:
    ```bash
    cd <path to repository>/src/vlmaps
    mkdir -p data/vlmaps
@@ -47,7 +47,7 @@ conda activate limbo
    You can easily unzip via `unzip <path to home directory>/Downloads/vlmaps.zip -d <path to repository>/src/vlmaps/data/vlmaps`. 
 
 #### 2. Download mesh
-   - [Mesh](https://drive.google.com/file/d/1uX5bhO-e-B14faxfYmla2LYUmAoUkDK_/view?usp=sharing)
+   - [Mesh](https://drive.google.com/file/d/1oGNUDJ-lhuVAYgKpygG1Ph2kobFab0qU/view?usp=sharing)
 
    Locate `209.dae` under `<path to repository>/src/environment/models/209/meshes/`
 
