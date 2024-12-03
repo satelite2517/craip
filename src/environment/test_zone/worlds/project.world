@@ -106,7 +106,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>-1.9404 0.836833 1.4 -0.004566 0.010205 2.3371</pose>
+      <pose>-1.83329 0.884171 1.4 -0.004566 0.010205 2.3371</pose>
     </model>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
@@ -130,28 +130,28 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='world'>
-      <sim_time>2419 955000000</sim_time>
-      <real_time>100 346260264</real_time>
-      <wall_time>1732609680 232342418</wall_time>
-      <iterations>87845</iterations>
+      <sim_time>2781 272000000</sim_time>
+      <real_time>43 501725361</real_time>
+      <wall_time>1733204315 325266217</wall_time>
+      <iterations>43418</iterations>
       <model name='209'>
-        <pose>-1.90584 0.836044 1.4 -0.004566 0.010205 2.3371</pose>
+        <pose>-1.83329 0.884171 1.4 -0.004566 0.010205 2.3371</pose>
         <scale>1 1 1</scale>
         <link name='209_link'>
-          <pose>-1.90584 0.836044 1.4 -0.004566 0.010205 2.3371</pose>
+          <pose>-1.83329 0.884171 1.4 -0.004566 0.010205 2.3371</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='Chair'>
-        <pose>-2.09689 -0.563153 -1e-06 8e-06 -1.8e-05 3.11931</pose>
+        <pose>-2.05998 -0.50746 -0 -1e-06 -0 3.10123</pose>
         <scale>1 1 1</scale>
         <link name='body'>
-          <pose>-2.09689 -0.563153 -1e-06 -1.8e-05 -8e-06 -1.59307</pose>
+          <pose>-2.05998 -0.50746 -0 0 1e-06 -1.61115</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -9.8 0 -0 0</wrench>
+          <acceleration>-0.179365 0.444267 -0.039626 1.80967 1.14076 -0.312145</acceleration>
+          <wrench>-0.179365 0.444267 -0.039626 0 -0 0</wrench>
         </link>
       </model>
       <model name='Exit sign'>
@@ -263,33 +263,33 @@
         </link>
       </model>
       <model name='blue Cone'>
-        <pose>3.14832 1.79786 -9e-06 1e-06 5e-06 -0.000311</pose>
+        <pose>3.19052 1.79785 -0 0 3e-06 -0.000311</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>3.14832 1.79786 -9e-06 1e-06 5e-06 -0.000311</pose>
+          <pose>3.19052 1.79785 -0 0 3e-06 -0.000311</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='circle_sign'>
-        <pose>2.93458 -2.52097 -0.527311 0 0 -0.037379</pose>
+        <pose>2.93565 -2.49251 -0.527311 0 0 -0.037379</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>2.93458 -2.52097 -0.527311 0 0 -0.037379</pose>
+          <pose>2.93565 -2.49251 -0.527311 0 0 -0.037379</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='coke_can'>
-        <pose>1.4529 0.827877 0.446873 -0.011192 0.005541 0.070197</pose>
+        <pose>1.45381 0.792545 0.446872 -0.011007 0.005521 0.173585</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>1.4529 0.827877 0.446873 -0.011192 0.005541 0.070197</pose>
+          <pose>1.45381 0.792545 0.446872 -0.011007 0.005521 0.173585</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.084037 0.58295 1.26652 -1.925 -1.14279 -2.00941</acceleration>
-          <wrench>-0.032774 0.227351 0.493945 0 -0 0</wrench>
+          <acceleration>-0.912283 0.100427 0.561357 -1.44928 1.54166 0.178592</acceleration>
+          <wrench>-0.35579 0.039166 0.218929 0 -0 0</wrench>
         </link>
       </model>
       <model name='diamond_sign'>
@@ -303,62 +303,62 @@
         </link>
       </model>
       <model name='drc_practice_weighted_door'>
-        <pose>-5.37332 2.92034 0 -0 -0 -0</pose>
+        <pose>-5.37332 2.92034 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='door'>
-          <pose>-5.37332 2.92034 2.04 3.14159 0 -3e-06</pose>
-          <velocity>-0.000118 3e-06 -2e-06 0 -7.1e-05 5e-05</velocity>
-          <acceleration>-0.102555 -0.004218 0.064398 -0.000511 -0.15269 -0.022531</acceleration>
-          <wrench>-4.23815 -0.174307 2.66129 0 -0 0</wrench>
+          <pose>-5.37332 2.92034 2.04 3.14159 0 -4e-06</pose>
+          <velocity>6.6e-05 -2e-06 1e-06 0 3.7e-05 -2.1e-05</velocity>
+          <acceleration>0.047774 0.006987 -0.028143 0.000202 0.067182 0.020366</acceleration>
+          <wrench>1.97427 0.288729 -1.16302 0 -0 0</wrench>
         </link>
         <link name='frame'>
-          <pose>-5.31332 2.91984 0 -0 -0 -0</pose>
-          <velocity>1.7e-05 -9e-06 0 -0 -7.3e-05 -8.1e-05</velocity>
-          <acceleration>-0.137627 -0.013458 -0.003594 -7.8e-05 -0.156762 -0.158747</acceleration>
-          <wrench>-2.61491 -0.255709 -0.068293 0 -0 0</wrench>
+          <pose>-5.31332 2.91984 0 0 -0 0</pose>
+          <velocity>-4e-06 2e-06 -0 -0 3.8e-05 1.3e-05</velocity>
+          <acceleration>0.061371 0.005477 0.001593 2.2e-05 0.068769 0.06481</acceleration>
+          <wrench>1.16605 0.10407 0.030263 0 -0 0</wrench>
         </link>
         <link name='handles'>
           <pose>-4.55892 2.85034 1.05 0 -0 3.14159</pose>
-          <velocity>-4.2e-05 4.4e-05 5.6e-05 -1.2e-05 -7.1e-05 5.5e-05</velocity>
-          <acceleration>-0.103822 -0.012541 0.119117 -0.037368 -0.152633 0.035258</acceleration>
-          <wrench>-0.207643 -0.025083 0.238234 0 -0 0</wrench>
+          <velocity>2.7e-05 -1.9e-05 -2.9e-05 6e-06 3.7e-05 -2.3e-05</velocity>
+          <acceleration>0.048468 0.014363 -0.052212 -0.010859 0.067159 0.017844</acceleration>
+          <wrench>0.096935 0.028725 -0.104424 0 -0 0</wrench>
         </link>
       </model>
       <model name='foldable_chair'>
-        <pose>1.46957 0.846428 0.000306 -0.001493 -0 -1.58071</pose>
+        <pose>1.46955 0.786694 0.000307 -0.001493 -0 -1.58096</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>
-          <pose>1.46957 0.846428 0.000306 -0.001493 -0 -1.58071</pose>
+          <pose>1.46955 0.786694 0.000307 -0.001493 -0 -1.58096</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.000517 0.00089 0.579748 2.90109 0.034229 -0.002022</acceleration>
-          <wrench>0.000517 0.00089 0.579748 0 -0 0</wrench>
+          <acceleration>-0.00058 -6e-06 0.312097 3.12321 -1.22507 -3.14146</acceleration>
+          <wrench>-0.00058 -6e-06 0.312097 0 -0 0</wrench>
         </link>
       </model>
       <model name='foldable_chair_0'>
-        <pose>0.877349 2.24161 0.000307 -0.001493 0 3.12141</pose>
+        <pose>1.03747 2.28737 0.000306 -0.001493 -1e-06 3.12141</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>
-          <pose>0.877349 2.24161 0.000307 -0.001493 0 3.12141</pose>
+          <pose>1.03747 2.28737 0.000306 -0.001493 -1e-06 3.12141</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.000762 -1.5e-05 0.482209 -3.09144 0.65582 3.14159</acceleration>
-          <wrench>0.000762 -1.5e-05 0.482209 0 -0 0</wrench>
+          <acceleration>0.000744 -1.5e-05 0.234772 -3.09263 0.71564 3.14159</acceleration>
+          <wrench>0.000744 -1.5e-05 0.234772 0 -0 0</wrench>
         </link>
       </model>
       <model name='foldable_chair_1'>
-        <pose>-2.00287 -2.28878 0.000306 -0.001493 1e-06 0</pose>
+        <pose>-1.86512 -2.27113 -0.000597 -0.002061 0.003207 -0.026126</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>
-          <pose>-2.00287 -2.28878 0.000306 -0.001493 1e-06 0</pose>
+          <pose>-1.86512 -2.27113 -0.000597 -0.002061 0.003207 -0.026126</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.000695 -0 -0.41968 3.14158 0.873395 -3.14159</acceleration>
-          <wrench>0.000695 -0 -0.41968 0 -0 0</wrench>
+          <acceleration>-0.011634 0.005562 0.015832 0.041444 0.078916 0.0724</acceleration>
+          <wrench>-0.011634 0.005562 0.015832 0 -0 0</wrench>
         </link>
       </model>
       <model name='green Cone'>
-        <pose>2.41812 1.80101 -0 2e-06 -1e-06 -0</pose>
+        <pose>2.44442 1.80101 -9e-06 3e-06 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>2.41812 1.80101 -0 2e-06 -1e-06 -0</pose>
+          <pose>2.44442 1.80101 -9e-06 3e-06 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -435,50 +435,40 @@
         </link>
       </model>
       <model name='number2'>
-        <pose>0.077387 0.322035 -0.397165 0 -0 2.35934</pose>
+        <pose>-0.31334 0.880989 -0.397165 0 -0 2.35934</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.077387 0.322035 -0.397165 0 -0 2.35934</pose>
+          <pose>-0.31334 0.880989 -0.397165 0 -0 2.35934</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='number3'>
-        <pose>-1.16673 -0.707067 -0.398385 0 -0 0.813711</pose>
+        <pose>-1.08236 0.081871 -0.398385 0 -0 0.813711</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-1.16673 -0.707067 -0.398385 0 -0 0.813711</pose>
+          <pose>-1.08236 0.081871 -0.398385 0 -0 0.813711</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='number4'>
-        <pose>0.13469 1.51819 -0.399033 0 0 -1.60122</pose>
+        <pose>0.235634 0.016308 -0.399033 0 -0 3.13859</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.13469 1.51819 -0.399033 0 0 -1.60122</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='number5'>
-        <pose>0.052314 -0.771781 -0.399067 0 -0 1.54555</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>0.052314 -0.771781 -0.399067 0 -0 1.54555</pose>
+          <pose>0.235634 0.016308 -0.399033 0 -0 3.13859</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='red Cone'>
-        <pose>3.84265 1.77487 0.000178 0.00148 0.001485 0.000658</pose>
+        <pose>3.88805 1.7749 0 -0 3e-06 0.000657</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>3.84265 1.77487 0.000178 0.00148 0.001485 0.000658</pose>
+          <pose>3.88805 1.7749 0 -0 3e-06 0.000657</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -495,10 +485,10 @@
         </link>
       </model>
       <model name='triangle_sign'>
-        <pose>3.73505 -2.57453 -0.256332 0 0 -0.039524</pose>
+        <pose>3.7357 -2.55821 -0.256332 0 0 -0.039524</pose>
         <scale>1 1 1</scale>
         <link name='triangle_sign_link'>
-          <pose>3.73505 -2.57453 -0.256332 0 0 -0.039524</pose>
+          <pose>3.7357 -2.55821 -0.256332 0 0 -0.039524</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1162,7 +1152,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>2.58693 0.88043 5.14863 -1.8e-05 1.5698 1.58577</pose>
+        <pose>0.461348 -0.801074 11.7083 0 1.5698 -0.018281</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -1411,29 +1401,6 @@
               <uri>model://number4/materials/scripts</uri>
               <uri>model://number4/materials/textures</uri>
               <name>Number/Four</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-    </model>
-    <model name='number5'>
-      <pose>0.154285 -0.642568 0.4 0 -0 0</pose>
-      <static>1</static>
-      <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://number1/meshes/number.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://number5/materials/scripts</uri>
-              <uri>model://number5/materials/textures</uri>
-              <name>Number/Five</name>
             </script>
           </material>
         </visual>
