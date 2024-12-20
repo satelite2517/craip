@@ -96,12 +96,36 @@ By sourcing this file, you'll ensure that ROS can locate and use the new package
    3. Pass through a slowly opening door without bumping into it
    4. Stop at the stop sign (3 seconds)
 ### Additional Mission
-   - Each team will be asked to propose a mission. 
-   - If you need assistance with any part of the mission implementation, the teaching assistants will be available to help. 
-   - If a mission is deemed unfeasible, it may be declined.
+   1. Pull out the chair from the desk and place the soccer ball on top of it
+   2. Return to the starting point by retracing your steps in reverse order without colliding with any obstacles
+   3. Move to a specific sign among three signs with different shapes drawn on them
+   4. Follow the numbers drawn on the floor in ascending order
+   5. Move the bottle from a chair to a sofa
+   6. Stop in front of a specific-colored cone
 
-  _You may use any type of robot and any method to complete the mission. 
-  Detailed evaluation criteria will be announced later._ 
+## Competition Results
+
+| Rank | Team Name | Driving Video                      |
+|------|-----------|------------------------------------|
+| 1    | Group2    | ![Group1](./images/group2.gif)     |
+| 2    | Group1    | ![Group2](./images/group1.gif)     |
+| 3    | Group3    | ![Group3](./images/group3.gif)     |
+| 4    | Group6    | ![Group4](./images/group6.gif)     |
+| 5    | Group5    | ![Group5](./images/group5.gif)     |
+| 6    | Group4    | ![Group6](./images/group4.gif)     |
+
+## Competition Results Table
+
+| Rank | Human | Goal | Door | Stop Sign | Chair Ball | Reverse | Signboard | Ascending | Cola Can | Cone | Mission Abandon | Time      | Final Time | Total Score | Group |
+|------|-------|------|------|-----------|------------|---------|-----------|------------|----------|------|------------------|-----------|------------|-------------|-------|
+| 1    | O     | O    | O    | O         | X          | △       | O         | O          | X        | O    | 5,9              | 8m 50s    | 9m 50s     | 27.5        | 2     |
+| 2    | O     | O    | O    | O         | X          | △       | O         | O          | X        | O    | 5,9              | 29m 10s   | 30m 10s    | 27.5        | 1     |
+| 3    | △     | O    | O    | O         | X          | △       | O         | O          | X        | O    | 5,9              | 17m 48s   | 18m 48s    | 22.5        | 3     |
+| 4    | O     | O    | O    | O         | X          | X       | O         | O          | X        | O    | -                | 27m 56s   | 27m 56s    | 20          | 6     |
+| 5    | O     | O    | O    | O         | X          | X       | O         | X          | X        | O    | 5,6,9            | 28m       | 29m 30s    | 15          | 5     |
+| 6    | △     | X    | O    | O         | X          | X       | O         | △          | X        | O    | 5,9              | 11m 6s    | 12m 6s     | 7.5         | 4     |
+
+
 
 ## Navigating with Custom User Instruction
 To execute the basic language navigation task, run the manual below.
@@ -189,6 +213,8 @@ python filter_subgoal_coord.py --init_coord <x_coordinate>, <y_coordinate> --lan
 roslaunch vlmaps publish_subgoal_coordinates.launch 
 ```
 This launch file emits the coordinate of the first landmark immediately. Publication of the following coordinates are driven by an arrival signal (`/subgoal_arrived_topic`) from path planner.
+
+If you want to use the GPU for subgoal coordinate extraction, please change the device from cpu to cuda in publish_subgoal_coordinates.launch.
 
 ## Path Planner (D* Lite)
 ### Running D-star Lite planner
