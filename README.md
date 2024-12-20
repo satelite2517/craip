@@ -2,7 +2,7 @@
 
 ## Overview
 ![image](./images/group_photo.jpg)
-CRAIP is the final project for the **"How to Make a Robot with Artificial Intelligence (M2177.002600), Fall 2024"** course.
+CRAIP is the final project for Seoul National University's **"How to Make a Robot with Artificial Intelligence (M2177.002600), Fall 2024"** course.
 
 CRAIP is developed using the Language-Image-based Mobile Robot (LIMBO) framework, designed to enable robots to perform navigation tasks based on language instructions.
 
